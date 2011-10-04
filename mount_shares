@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Prasanth's Songs
+sudo mount.cifs //10.6.7.69/classical-at\ its\ best /media/PRASANTH/share1 -o credentials=/home/sanantha/.credentials
+sudo mount.cifs //10.6.7.69/G0D_I\$_\$@\(\# /media/PRASANTH/share2 -o credentials=/home/sanantha/.credentials

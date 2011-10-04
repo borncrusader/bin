@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! -z "$1" ];
+then
+  # r - recursive
+  # k - convert links
+  # np - don't ascend to parent
+  # U - send as a normal user agent
+  # p - page requisites
+  # nc - no clobber
+  # --domains - only from this domain
+  wget -r -k -np -U Mozilla -p -nc --domains="$1" "$1"
+else
+  echo "usage : wget_site [url]"
+fi

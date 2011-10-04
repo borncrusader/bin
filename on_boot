@@ -1,0 +1,19 @@
+#!/bin/bash
+echo -n "Mounting unixWork .. "
+sshfs thunder12:/net/thunder12/sanantha ~/thunderwork
+if [ $? -eq 0 ] ; then
+  echo "done"
+else
+  echo "some problem"
+fi
+echo -n "Mounting unixHome .. "
+sshfs thunder12:/home/sanantha ~/thunderhome
+if [ $? -eq 0 ] ; then
+  echo "done"
+else
+  echo "some problem"
+fi
+
+echo "Mounting Prasanth's shares"
+sudo smbmount //10.6.7.69/classical-at-its-best ~/prasanth_music/ \
+                     -o credentials=~/.smb_credentials,uid=1000,mask=000

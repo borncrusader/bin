@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd ~/Dropbox/monk/def
+
+find /usr/include -name '*.[ch]' > files.lst
+find /usr/include -name '*.cpp' >> files.lst
+echo "files.lst created!"
+
+cscope -bqi files.lst
+echo "cscope db built!"

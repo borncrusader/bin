@@ -1,0 +1,8 @@
+#!/bin/bash
+
+find -name '*.[ch]' > files.lst
+find -name '*.cpp' >> files.lst
+echo "files.lst created!"
+
+cscope -bqi files.lst
+echo "cscope db built!"
